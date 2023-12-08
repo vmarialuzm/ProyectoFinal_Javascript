@@ -55,9 +55,11 @@ function renderPagosVencidos(pago) {
     return `
         <div class="card mb-3">
             <div class="card-body">
-                <span>${pago.id}</span>
+                <span><img src="${pago.payment_user_id.service_id.logo}" class="img-fluid" style="height: 30px;" alt=""></span>
+                <span>${pago.payment_user_id.service_id.name}</span>
+                <span>${pago.payment_user_id.payment_date}</span>
+                <span>${pago.payment_user_id.amount}</span>
                 <span>${pago.penalty_fee_amount}</span>
-                <span>${pago.payment_user_id}</span>
             </div>
         </div>
     `;
