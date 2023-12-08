@@ -28,7 +28,7 @@ form.onsubmit = async function (event) {
             text: "Logueado correctamente",
             icon: "success"
         });
-        //location.href = "/principal";
+        location.href = "/principal.html";
 
     } catch (error) {
         Swal.fire({
