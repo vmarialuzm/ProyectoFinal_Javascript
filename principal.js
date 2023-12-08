@@ -22,12 +22,16 @@ getPagosRealizados();
 
 function renderPagosRealizados(pago) {
     return `
-        <p>${pago.id}</p>
-        <p>${pago.amount}</p>
-        <p>${pago.payment_date}</p>
-        <p>${pago.expiration_date}</p>
-        <p>${pago.user_id}</p>
-        <p>${pago.service_id}</p>
+        <div class="card mb-3">
+            <div class="card-body">
+                <span>${pago.id}</span>
+                <span>${pago.amount}</span>
+                <span>${pago.payment_date}</span>
+                <span>${pago.expiration_date}</span>
+                <span>${pago.user_id}</span>
+                <span>${pago.service_id}</span>
+            </div>
+        </div>
     `;
 }
 
@@ -51,8 +55,12 @@ getPagosVencidos();
 
 function renderPagosVencidos(pago) {
     return `
-        <p>${pago.id}</p>
-        <p>${pago.penalty_fee_amount}</p>
-        <p>${pago.payment_user_id}</p>
+        <div class="card mb-3">
+            <div class="card-body">
+                <span>${pago.id}</span>
+                <span>${pago.penalty_fee_amount}</span>
+                <span>${pago.payment_user_id}</span>
+            </div>
+        </div>
     `;
 }
