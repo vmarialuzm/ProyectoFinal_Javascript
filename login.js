@@ -24,9 +24,17 @@ form.onsubmit = async function (event) {
         const token = data.tokens.access
         localStorage.setItem("token.access", token)
 
-    } catch (error) {
-        console.log(error)
-    }
+        Swal.fire({
+            text: "Logueado correctamente",
+            icon: "success"
+        });
+        //location.href = "/principal";
 
-}
+    } catch (error) {
+        Swal.fire({
+            text: error,
+            icon: "error"
+        });
+    }
+};
 
