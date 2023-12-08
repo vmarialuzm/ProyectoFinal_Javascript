@@ -24,12 +24,10 @@ function renderPagosRealizados(pago) {
     return `
         <div class="card mb-3">
             <div class="card-body">
-                <span>${pago.id}</span>
-                <span>${pago.amount}</span>
+                <span><img src="${pago.service_id.logo}" class="img-fluid" style="height: 30px;" alt=""></span>
+                <span>${pago.service_id.name}</span>
                 <span>${pago.payment_date}</span>
-                <span>${pago.expiration_date}</span>
-                <span>${pago.user_id}</span>
-                <span>${pago.service_id}</span>
+                <span>${pago.amount}</span>
             </div>
         </div>
     `;
