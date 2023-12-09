@@ -23,6 +23,7 @@ form.onsubmit = async function (event) {
         console.log(data.tokens.access);
         const token = data.tokens.access
         localStorage.setItem("token.access", token)
+        localStorage.setItem("email", body.email)
 
         Swal.fire({
             text: "Logueado correctamente",
